@@ -124,9 +124,8 @@ class ShoppingCartScreen extends StatelessWidget {
                       child: ListTile(
                         leading: Image.asset(
                           'assets/icons/home.png',
-                          fit: BoxFit.fitWidth,
-                          height: 35,
-                          width: 35,
+                          height: 20,
+                          width: 20,
                         ),
                         title: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -136,7 +135,12 @@ class ShoppingCartScreen extends StatelessWidget {
                             Text(
                               'Avenida lins de vasconcelos, 1455 - ap 44 bl 1 ',
                               maxLines: 1,
-                              style: bottomAppBarTextStyle,
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.normal,
+                                fontStyle: FontStyle.normal,
+                                color: Color(0xffA1A4B1),
+                              ),
                             ),
                           ],
                         ),
@@ -152,25 +156,29 @@ class ShoppingCartScreen extends StatelessWidget {
                         builder: (context) => PaymentInformationScreen())),
                     child: Container(
                       margin: const EdgeInsets.only(bottom: 5),
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      padding: const EdgeInsets.only(left: 15, right: 20),
                       height: 56,
                       color: Colors.white,
                       child: ListTile(
                         leading: Image.asset(
                           'assets/icons/card.png',
-                          fit: BoxFit.fitWidth,
-                          height: 40,
-                          width: 40,
+                          height: 30,
+                          width: 30,
                         ),
                         title: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
-                            Text('Payment Information', style: px12BoldBlack),
+                            Text(' Payment Information', style: px12BoldBlack),
                             Text(
-                              'VISA  ****-****-****-3995',
+                              ' VISA  ****-****-****-3995',
                               maxLines: 1,
-                              style: bottomAppBarTextStyle,
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.normal,
+                                fontStyle: FontStyle.normal,
+                                color: Color(0xffA1A4B1),
+                              ),
                             ),
                           ],
                         ),
@@ -252,7 +260,7 @@ class ShoppingCartScreen extends StatelessWidget {
               height: 48,
               child: ButtonWidget(
                   textColor: Colors.white,
-                  color: Theme.of(context).primaryColor,
+                  color: Color(0xffB0B0B0),
                   text: 'COMPLETE ORDER'),
             ),
           ],

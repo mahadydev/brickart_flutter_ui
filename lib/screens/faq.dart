@@ -1,3 +1,5 @@
+import 'package:brickart_flutter/util/textstyle_constant.dart';
+
 import '../widgets/appbar_listtile.dart';
 
 import '../widgets/button_widget.dart';
@@ -63,15 +65,9 @@ class FAQScreen extends StatelessWidget {
               ),
             ),
             Container(
-              margin: const EdgeInsets.symmetric(vertical: 8),
+              margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 14),
               decoration: BoxDecoration(
                 color: Colors.white,
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromARGB(75, 0, 0, 0),
-                    offset: Offset(1, 1),
-                  ),
-                ],
               ),
               child: Column(
                 children: <Widget>[
@@ -89,23 +85,27 @@ class FAQScreen extends StatelessWidget {
                   SizedBox(
                     height: 16,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 18),
-                    child: Text(
-                      'Veja algumas das principais perguntas abaixo',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.normal,
-                        color: Color(0xff5B5B5B),
-                      ),
+                  Text(
+                    'Veja algumas das principais perguntas abaixo',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.normal,
+                      color: Color(0xff5B5B5B),
                     ),
                   ),
                   SizedBox(
                     height: 16,
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'O que são os bricks?',
+                    textStyle: faqTitle,
                     content:
                         'Todos os bricks são produzidos com um material plástico super leve e resistente.',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
@@ -113,44 +113,69 @@ class FAQScreen extends StatelessWidget {
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'Existem tamanhos diferentes?',
-                    content:
-                        'Todos os bricks são produzidos com um material plástico super leve e resistente.',
+                    textStyle: faqTitle,
+                    content: ' ',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
                     expandedTitlebackgroundColor: Color(0xffFAFAFC),
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'Que adesivo é esse?',
-                    content:
-                        'Todos os bricks são produzidos com um material plástico super leve e resistente.',
+                    textStyle: faqTitle,
+                    content: ' ',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
                     expandedTitlebackgroundColor: Color(0xffFAFAFC),
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'O que são os bricks?',
+                    textStyle: faqTitle,
                     content:
                         'Todos os bricks são produzidos com um material plástico super leve e resistente.',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
@@ -158,44 +183,69 @@ class FAQScreen extends StatelessWidget {
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'Existem tamanhos diferentes?',
-                    content:
-                        'Todos os bricks são produzidos com um material plástico super leve e resistente.',
+                    textStyle: faqTitle,
+                    content: ' ',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
                     expandedTitlebackgroundColor: Color(0xffFAFAFC),
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'Que adesivo é esse?',
-                    content:
-                        'Todos os bricks são produzidos com um material plástico super leve e resistente.',
+                    textStyle: faqTitle,
+                    content: ' ',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
                     expandedTitlebackgroundColor: Color(0xffFAFAFC),
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'O que são os bricks?',
+                    textStyle: faqTitle,
                     content:
                         'Todos os bricks são produzidos com um material plástico super leve e resistente.',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
@@ -203,40 +253,58 @@ class FAQScreen extends StatelessWidget {
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'Existem tamanhos diferentes?',
-                    content:
-                        'Todos os bricks são produzidos com um material plástico super leve e resistente.',
+                    textStyle: faqTitle,
+                    content: ' ',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
                     expandedTitlebackgroundColor: Color(0xffFAFAFC),
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                   GFAccordion(
+                    margin: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 0, right: 0),
+                    contentPadding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 5, bottom: 5),
+                    titlePadding: const EdgeInsets.only(
+                        top: 0, bottom: 8, left: 16, right: 10),
                     title: 'Que adesivo é esse?',
-                    content:
-                        'Todos os bricks são produzidos com um material plástico super leve e resistente.',
+                    textStyle: faqTitle,
+                    content: ' ',
                     collapsedTitlebackgroundColor: Color(0xffFAFAFC),
                     expandedTitlebackgroundColor: Color(0xffFAFAFC),
                     collapsedIcon: Icon(
                       Icons.expand_more,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                     expandedIcon: Icon(
                       Icons.expand_less,
                       color: Theme.of(context).primaryColor,
+                      size: 20,
                     ),
                   ),
                 ],

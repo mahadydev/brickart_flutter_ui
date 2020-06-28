@@ -19,11 +19,16 @@ class BottomCartWidget extends StatelessWidget {
                     'Each Additional Brick R\$35,00',
                     style: bottomAppBarTextStyle.copyWith(
                       color: Color(0xFFA1A4B1),
+                      fontWeight: FontWeight.normal,
                     ),
+                  ),
+                  SizedBox(
+                    height: 2,
                   ),
                   Text(
                     'Sub-total: R\$170,00',
                     style: TextStyle(
+                      color: Color(0xff5B5B5B),
                       fontSize: 12,
                       fontWeight: FontWeight.bold,
                       fontFamily: 'Montserrat',
@@ -39,15 +44,18 @@ class BottomCartWidget extends StatelessWidget {
               height: 48,
               color: Theme.of(context).primaryColor,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  Text(
-                    'Go to Cart',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 12,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Montserrat',
+                  Center(
+                    child: Text(
+                      'Go to Cart',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        fontFamily: 'Montserrat',
+                      ),
                     ),
                   ),
                   Icon(

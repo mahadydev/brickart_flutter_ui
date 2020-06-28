@@ -56,33 +56,47 @@ class LoginScreen extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       'Email',
-                      style: kTextFieldLabel,
+                      style: px14SnormalWbold.copyWith(
+                        color: Color(0xff303030),
+                      ),
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        labelText: "aaa@aaa.com.br",
-                        labelStyle: kTextFieldHintText,
+                    Container(
+                      margin: const EdgeInsets.only(top: 3),
+                      height: 24,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          labelText: "aaa@aaa.com.br",
+                          labelStyle: kTextFieldHintText,
+                        ),
                       ),
                     ),
                     SizedBox(
-                      height: 10,
+                      height: 24,
                     ),
                     Text(
                       'Password',
-                      style: kTextFieldLabel,
-                    ),
-                    TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        labelText: "***********",
-                        labelStyle: kTextFieldHintText,
+                      style: px14SnormalWbold.copyWith(
+                        color: Color(0xff303030),
                       ),
                     ),
-                    SizedBox(height: 16),
+                    Container(
+                      margin: const EdgeInsets.only(top: 3),
+                      height: 24,
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          labelText: "***********",
+                          labelStyle: kTextFieldHintText,
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: 24),
                     Center(
                       child: Text(
                         'I forgot my password',
                         style: TextStyle(
+                          fontStyle: FontStyle.normal,
+                          fontWeight: FontWeight.normal,
                           fontSize: 9,
                           color: Color(0xffA1A4B1),
                         ),
@@ -91,40 +105,43 @@ class LoginScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              Row(
-                children: <Widget>[
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => RegistrationScreen()),
-                        );
-                      },
-                      child: ButtonWidget(
-                        textColor: Theme.of(context).primaryColor,
-                        color: Colors.white,
-                        text: 'REGISTER',
+              Container(
+                height: 40,
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                                builder: (context) => RegistrationScreen()),
+                          );
+                        },
+                        child: ButtonWidget(
+                          textColor: Theme.of(context).primaryColor,
+                          color: Colors.white,
+                          text: 'REGISTER',
+                        ),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: 15,
-                  ),
-                  Expanded(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => PageViewBuild()));
-                      },
-                      child: ButtonWidget(
-                        textColor: Colors.white,
-                        color: Theme.of(context).primaryColor,
-                        text: 'LOGIN',
+                    SizedBox(
+                      width: 15,
+                    ),
+                    Expanded(
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PageViewBuild()));
+                        },
+                        child: ButtonWidget(
+                          textColor: Color(0xffFAFAFC),
+                          color: Theme.of(context).primaryColor,
+                          text: 'LOGIN',
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               SizedBox(height: 10),
               Text(
@@ -149,7 +166,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Text(
                           'instagram',
-                          style: bottomAppBarTextStyle,
+                          style: px9SnormWnormal,
                         )
                       ],
                     ),
@@ -161,7 +178,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Text(
                           'google',
-                          style: bottomAppBarTextStyle,
+                          style: px9SnormWnormal,
                         ),
                       ],
                     ),
@@ -173,7 +190,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                         Text(
                           'facebook',
-                          style: bottomAppBarTextStyle,
+                          style: px9SnormWnormal,
                         ),
                       ],
                     ),

@@ -12,9 +12,9 @@ class DrawerMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(left: 32, top: 64, bottom: 32),
+      padding: const EdgeInsets.only(left: 32, top: 64, bottom: 32, right: 32),
       height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width * 0.7,
+      width: MediaQuery.of(context).size.width * 0.75,
       decoration: BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.bottomLeft,
@@ -68,18 +68,31 @@ class DrawerMenu extends StatelessWidget {
                         'Customer Service',
                         style: drawerMenuTextStyle,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(right: 20),
-                        child: CircleAvatar(
-                          radius: 8,
-                          backgroundColor: Colors.white,
+                      Container(
+                        width: 16,
+                        height: 16,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.25),
+                              offset: Offset(1, 1),
+                            )
+                          ],
+                        ),
+                        child: Center(
                           child: Text(
                             '1',
                             style: TextStyle(
-                                color: Theme.of(context).primaryColor),
+                              color: Theme.of(context).primaryColor,
+                              fontSize: 8,
+                              fontWeight: FontWeight.bold,
+                              fontStyle: FontStyle.normal,
+                            ),
                           ),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),

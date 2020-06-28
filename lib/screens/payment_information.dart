@@ -29,163 +29,172 @@ class _PaymentInformationScreenState extends State<PaymentInformationScreen> {
       ),
       key: _drawerKey,
       drawer: DrawerMenu(),
-      body: Padding(
-        padding: const EdgeInsets.only(top: 20),
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: ListView(
-                children: <Widget>[
-                  Padding(
-                    padding: const EdgeInsets.only(left: 14),
-                    child: Image.asset(
-                      'assets/paymentcards.png',
-                    ),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            child: ListView(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.only(left: 14, top: 20),
+                  child: Image.asset(
+                    'assets/paymentcards.png',
+                    height: 100,
                   ),
-                  SizedBox(
-                    height: 18,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 32),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Text(
-                          'Nome do titular',
-                          style: kTextFieldLabel,
-                        ),
-                        TextField(
+                ),
+                SizedBox(
+                  height: 18,
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Nome do titular',
+                        style: kTextFieldLabel,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 5, bottom: 10),
+                        height: 24,
+                        child: TextField(
                           decoration: InputDecoration(
                             labelText: "Nome como escrito no cartão",
                             labelStyle: kTextFieldHintText,
                             contentPadding: EdgeInsets.symmetric(vertical: 5),
                           ),
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Text(
-                          'Card Number',
-                          style: kTextFieldLabel,
-                        ),
-                        TextField(
+                      ),
+                      Text(
+                        'Card Number',
+                        style: kTextFieldLabel,
+                      ),
+                      Container(
+                        margin: const EdgeInsets.only(top: 5, bottom: 8),
+                        height: 24,
+                        child: TextField(
                           decoration: InputDecoration(
                             labelText: "xxxx-xxxx-xxxx-xxxx",
                             labelStyle: kTextFieldHintText,
-                            contentPadding: EdgeInsets.symmetric(vertical: 5),
                           ),
                         ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Row(
-                          children: <Widget>[
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    'Expiration Date',
-                                    style: kTextFieldLabel,
-                                  ),
-                                  TextField(
+                      ),
+                      Row(
+                        children: <Widget>[
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  'Expiration Date',
+                                  style: kTextFieldLabel,
+                                ),
+                                Container(
+                                  margin: const EdgeInsets.only(top: 8),
+                                  height: 24,
+                                  child: TextField(
                                     decoration: InputDecoration(
-                                      contentPadding:
-                                          EdgeInsets.symmetric(vertical: 5),
                                       labelText: "mês/ano",
                                       labelStyle: kTextFieldHintText,
                                     ),
                                   ),
-                                ],
-                              ),
+                                ),
+                              ],
                             ),
-                            SizedBox(
-                              width: 16,
-                            ),
-                            Expanded(
-                              child: Container(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      'CVV',
-                                      style: kTextFieldLabel,
-                                    ),
-                                    TextField(
+                          ),
+                          SizedBox(
+                            width: 16,
+                          ),
+                          Expanded(
+                            child: Container(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    'CVV',
+                                    style: kTextFieldLabel,
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 8),
+                                    height: 24,
+                                    child: TextField(
                                       decoration: InputDecoration(
                                         labelText: "123",
-                                        contentPadding:
-                                            EdgeInsets.symmetric(vertical: 5),
                                         labelStyle: kTextFieldHintText,
                                       ),
                                     ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 50),
-                        Text(
-                          'Installments',
-                          style: kTextFieldLabel,
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: <Widget>[
-                            Container(
-                              width: 80,
-                              decoration: BoxDecoration(),
-                              child: DropdownButton(
-                                items: [
-                                  DropdownMenuItem(
-                                    child: Text('1x    '),
-                                  ),
-                                  DropdownMenuItem(
-                                    child: Text('2x    '),
                                   ),
                                 ],
-                                onChanged: (value) {},
-                                icon: Container(
-                                  width: 28,
-                                  height: 26,
-                                  color: Color(0xff606060),
-                                  child: Icon(
-                                    Icons.keyboard_arrow_down,
-                                    size: 30,
-                                    color: Colors.white,
-                                  ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 73),
+                      Text(
+                        'Installments',
+                        style: kTextFieldLabel,
+                      ),
+                      SizedBox(height: 7),
+                      Row(
+                        children: <Widget>[
+                          Container(
+                            width: 80,
+                            child: DropdownButton(
+                              items: [
+                                DropdownMenuItem(
+                                  child: Text('1x'),
+                                ),
+                                DropdownMenuItem(
+                                  child: Text('2x    '),
+                                ),
+                              ],
+                              onChanged: (value) {},
+                              icon: Container(
+                                width: 28,
+                                height: 26,
+                                color: Color(0xff606060),
+                                child: Icon(
+                                  Icons.keyboard_arrow_down,
+                                  color: Colors.white,
                                 ),
                               ),
                             ),
-                            Expanded(
-                              child: Text(
-                                '1x installment of R\$170,00',
-                                style: px12NormalBlack,
+                          ),
+                          Expanded(
+                            child: Text(
+                              '1x installment of R\$170,00',
+                              style: TextStyle(
+                                color: Color(0xff5B5B5B),
+                                fontSize: 12,
+                                fontWeight: FontWeight.normal,
+                                fontStyle: FontStyle.normal,
                               ),
                             ),
-                          ],
-                        ),
-                        SizedBox(height: 20),
-                        Center(
-                          child: Image.asset(
-                            'assets/icons/marcado.png',
-                            height: 26,
-                            width: 100,
                           ),
+                        ],
+                      ),
+                      SizedBox(height: 93),
+                      Center(
+                        child: Image.asset(
+                          'assets/icons/marcado.png',
+                          height: 26,
+                          width: 100,
                         ),
-                      ],
-                    ),
-                  )
-                ],
-              ),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                    ],
+                  ),
+                )
+              ],
             ),
-            ButtonWidget(
-                textColor: Colors.white,
-                color: Theme.of(context).primaryColor,
-                text: 'ADD PAYMENT INFORMATION')
-          ],
-        ),
+          ),
+          ButtonWidget(
+              textColor: Colors.white,
+              color: Theme.of(context).primaryColor,
+              text: 'ADD PAYMENT INFORMATION')
+        ],
       ),
     );
   }

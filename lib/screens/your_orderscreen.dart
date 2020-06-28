@@ -40,6 +40,8 @@ class OrderCards extends StatelessWidget {
     return Card(
       color: Colors.white,
       child: GFAccordion(
+        titleContainerHeight: 120,
+        titlePadding: EdgeInsets.symmetric(horizontal: 10),
         titleChild: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -130,23 +132,33 @@ class OrderCards extends StatelessWidget {
             ],
           ),
         ),
-        collapsedIcon: CircleAvatar(
-          radius: 12,
-          backgroundColor: Theme.of(context).primaryColor,
+        collapsedIcon: Container(
+          height: 16,
+          width: 16,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Theme.of(context).primaryColor,
+          ),
           child: Center(
             child: Icon(
               Icons.expand_more,
               color: Colors.white,
+              size: 16,
             ),
           ),
         ),
-        expandedIcon: CircleAvatar(
-          radius: 12,
-          backgroundColor: Theme.of(context).primaryColor,
+        expandedIcon: Container(
+          height: 16,
+          width: 16,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Theme.of(context).primaryColor,
+          ),
           child: Center(
             child: Icon(
               Icons.expand_less,
               color: Colors.white,
+              size: 16,
             ),
           ),
         ),

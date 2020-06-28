@@ -54,38 +54,7 @@ class _PageViewBuildState extends State<PageViewBuild> {
           onTap: (index) {
             bottomTapped(index);
           },
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Container(
-                height: 30,
-                child: Image.asset('assets/icons/home.png'),
-              ),
-              title: Text(
-                'Home',
-                style: bottomAppBarTextStyle,
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                height: 30,
-                child: Image.asset('assets/icons/gallery.png'),
-              ),
-              title: Text(
-                'My Galary',
-                style: bottomAppBarTextStyle,
-              ),
-            ),
-            BottomNavigationBarItem(
-              icon: Container(
-                height: 30,
-                child: Image.asset('assets/icons/collections.png'),
-              ),
-              title: Text(
-                'Collections',
-                style: bottomAppBarTextStyle,
-              ),
-            ),
-          ],
+          items: _bottomNavItems,
         ),
       ),
       body: PageView(
@@ -102,4 +71,49 @@ class _PageViewBuildState extends State<PageViewBuild> {
       ),
     );
   }
+
+  final _bottomNavItems = <BottomNavigationBarItem>[
+    BottomNavigationBarItem(
+      icon: Container(
+        width: 72,
+        child: Image.asset(
+          'assets/icons/home.png',
+          height: 40,
+          width: 40,
+        ),
+      ),
+      title: Text(
+        'Home',
+        style: bottomAppBarTextStyle,
+      ),
+    ),
+    BottomNavigationBarItem(
+      icon: Container(
+        width: 72,
+        child: Image.asset(
+          'assets/icons/gallery.png',
+          height: 40,
+          width: 40,
+        ),
+      ),
+      title: Text(
+        'My Galary',
+        style: bottomAppBarTextStyle,
+      ),
+    ),
+    BottomNavigationBarItem(
+      icon: Container(
+        width: 72,
+        child: Image.asset(
+          'assets/icons/collections.png',
+          height: 40,
+          width: 40,
+        ),
+      ),
+      title: Text(
+        'Collections',
+        style: bottomAppBarTextStyle,
+      ),
+    ),
+  ];
 }

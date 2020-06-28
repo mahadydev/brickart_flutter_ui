@@ -19,7 +19,6 @@ class SocialView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Color(0xffE5E5E5),
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 32),
         child: ListView(

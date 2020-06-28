@@ -49,7 +49,7 @@ class RegistrationScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: const EdgeInsets.only(top: 30, bottom: 16),
+                margin: const EdgeInsets.only(top: 32, bottom: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -57,43 +57,51 @@ class RegistrationScreen extends StatelessWidget {
                       'Full Name',
                       style: kTextFieldLabel,
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        labelText: "************",
-                        labelStyle: kTextFieldHintText,
+                    Container(
+                      margin: const EdgeInsets.only(top: 3, bottom: 24),
+                      height: 24,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          labelText: "************",
+                          labelStyle: kTextFieldHintText,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
                     ),
                     Text(
                       'Email',
                       style: kTextFieldLabel,
                     ),
-                    TextField(
-                      decoration: InputDecoration(
-                        labelText: "aaa@aaa.com.br",
-                        labelStyle: kTextFieldHintText,
+                    Container(
+                      margin: const EdgeInsets.only(top: 3, bottom: 24),
+                      height: 24,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          labelText: "aaa@aaa.com.br",
+                          labelStyle: kTextFieldHintText,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      height: 10,
                     ),
                     Text(
                       'Password',
                       style: kTextFieldLabel,
                     ),
-                    TextField(
-                      obscureText: true,
-                      decoration: InputDecoration(
-                        labelText: "***********",
-                        labelStyle: kTextFieldHintText,
+                    Container(
+                      margin: const EdgeInsets.only(top: 3, bottom: 40),
+                      height: 24,
+                      child: TextField(
+                        obscureText: true,
+                        decoration: InputDecoration(
+                          labelText: "***********",
+                          labelStyle: kTextFieldHintText,
+                        ),
                       ),
                     ),
                   ],
                 ),
               ),
               Container(
+                margin: const EdgeInsets.only(bottom: 20),
+                height: 40,
                 child: GestureDetector(
                   onTap: () {
                     Navigator.of(context).pop(false);

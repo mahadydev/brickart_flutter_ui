@@ -36,49 +36,49 @@ class _ShippingAddressState extends State<ShippingAddress> {
               child: ListView(
                 children: <Widget>[
                   SizedBox(
-                    height: 20,
+                    height: 21,
                   ),
                   Text(
                     'Full Name',
                     style: kTextFieldLabel,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: "your name",
-                      labelStyle: kTextFieldHintText,
-                      contentPadding: EdgeInsets.symmetric(vertical: 5),
+                  Container(
+                    height: 24,
+                    margin: const EdgeInsets.only(top: 3, bottom: 24),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "your name",
+                        labelStyle: kTextFieldHintText,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                   Text(
                     'Email',
                     style: kTextFieldLabel,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: "aaa@aaa.com.br",
-                      labelStyle: kTextFieldHintText,
-                      contentPadding: EdgeInsets.symmetric(vertical: 5),
+                  Container(
+                    height: 24,
+                    margin: const EdgeInsets.only(top: 3, bottom: 24),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "aaa@aaa.com.br",
+                        labelStyle: kTextFieldHintText,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                   Text(
                     'Whatsapp Number',
                     style: kTextFieldLabel,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: "(xx) xxxxx-xxxx",
-                      labelStyle: kTextFieldHintText,
-                      contentPadding: EdgeInsets.symmetric(vertical: 5),
+                  Container(
+                    height: 24,
+                    margin: const EdgeInsets.only(top: 3, bottom: 24),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "(xx) xxxxx-xxxx",
+                        labelStyle: kTextFieldHintText,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                   Row(
                     children: <Widget>[
@@ -91,19 +91,21 @@ class _ShippingAddressState extends State<ShippingAddress> {
                               'Zip Code',
                               style: kTextFieldLabel,
                             ),
-                            TextField(
-                              decoration: InputDecoration(
-                                labelText: "xxxxxx-xxx",
-                                labelStyle: kTextFieldHintText,
-                                contentPadding:
-                                    EdgeInsets.symmetric(vertical: 5),
+                            Container(
+                              height: 24,
+                              margin: const EdgeInsets.only(top: 3, bottom: 24),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  labelText: "xxxxxx-xxx",
+                                  labelStyle: kTextFieldHintText,
+                                ),
                               ),
                             ),
                           ],
                         ),
                       ),
                       SizedBox(
-                        width: 16,
+                        width: 14,
                       ),
                       Expanded(
                         child: Container(
@@ -114,12 +116,15 @@ class _ShippingAddressState extends State<ShippingAddress> {
                                 'Address',
                                 style: kTextFieldLabel,
                               ),
-                              TextField(
-                                decoration: InputDecoration(
-                                  labelText: "Rua um dois três",
-                                  labelStyle: kTextFieldHintText,
-                                  contentPadding:
-                                      EdgeInsets.symmetric(vertical: 5),
+                              Container(
+                                height: 24,
+                                margin:
+                                    const EdgeInsets.only(top: 3, bottom: 24),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    labelText: "Rua um dois três",
+                                    labelStyle: kTextFieldHintText,
+                                  ),
                                 ),
                               ),
                             ],
@@ -127,9 +132,6 @@ class _ShippingAddressState extends State<ShippingAddress> {
                         ),
                       ),
                     ],
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                   Row(
                     children: <Widget>[
@@ -139,14 +141,17 @@ class _ShippingAddressState extends State<ShippingAddress> {
                           children: <Widget>[
                             Text(
                               'Address Number',
+                              maxLines: 1,
                               style: kTextFieldLabel,
                             ),
-                            TextField(
-                              decoration: InputDecoration(
-                                contentPadding:
-                                    EdgeInsets.symmetric(vertical: 5),
-                                labelText: "34",
-                                labelStyle: kTextFieldHintText,
+                            Container(
+                              height: 24,
+                              margin: const EdgeInsets.only(top: 3, bottom: 24),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  labelText: "Number 34",
+                                  labelStyle: kTextFieldHintText,
+                                ),
                               ),
                             ),
                           ],
@@ -164,12 +169,15 @@ class _ShippingAddressState extends State<ShippingAddress> {
                                 'Extention',
                                 style: kTextFieldLabel,
                               ),
-                              TextField(
-                                decoration: InputDecoration(
-                                  contentPadding:
-                                      EdgeInsets.symmetric(vertical: 5),
-                                  labelText: " ",
-                                  labelStyle: kTextFieldHintText,
+                              Container(
+                                height: 24,
+                                margin:
+                                    const EdgeInsets.only(top: 3, bottom: 24),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    labelText: " ",
+                                    labelStyle: kTextFieldHintText,
+                                  ),
                                 ),
                               ),
                             ],
@@ -178,22 +186,19 @@ class _ShippingAddressState extends State<ShippingAddress> {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 10,
-                  ),
                   Text(
                     'Neighborhood',
                     style: kTextFieldLabel,
                   ),
-                  TextField(
-                    decoration: InputDecoration(
-                      labelText: "Jardim um dois três",
-                      labelStyle: kTextFieldHintText,
-                      contentPadding: EdgeInsets.symmetric(vertical: 5),
+                  Container(
+                    height: 24,
+                    margin: const EdgeInsets.only(top: 3, bottom: 24),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        labelText: "Jardim um dois três",
+                        labelStyle: kTextFieldHintText,
+                      ),
                     ),
-                  ),
-                  SizedBox(
-                    height: 10,
                   ),
                   Row(
                     children: <Widget>[
@@ -205,12 +210,14 @@ class _ShippingAddressState extends State<ShippingAddress> {
                               'City',
                               style: kTextFieldLabel,
                             ),
-                            TextField(
-                              decoration: InputDecoration(
-                                contentPadding:
-                                    EdgeInsets.symmetric(vertical: 5),
-                                labelText: "São Paulo",
-                                labelStyle: kTextFieldHintText,
+                            Container(
+                              height: 24,
+                              margin: const EdgeInsets.only(top: 3, bottom: 24),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  labelText: "São Paulo",
+                                  labelStyle: kTextFieldHintText,
+                                ),
                               ),
                             ),
                           ],
@@ -228,12 +235,15 @@ class _ShippingAddressState extends State<ShippingAddress> {
                                 'State',
                                 style: kTextFieldLabel,
                               ),
-                              TextField(
-                                decoration: InputDecoration(
-                                  labelText: "São Paulo",
-                                  contentPadding:
-                                      EdgeInsets.symmetric(vertical: 5),
-                                  labelStyle: kTextFieldHintText,
+                              Container(
+                                height: 24,
+                                margin:
+                                    const EdgeInsets.only(top: 3, bottom: 24),
+                                child: TextField(
+                                  decoration: InputDecoration(
+                                    labelText: "São Paulo",
+                                    labelStyle: kTextFieldHintText,
+                                  ),
                                 ),
                               ),
                             ],

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 const TextStyle kAppBarTitleTextStyle = TextStyle(
   color: Color(0xFFFF005E),
-  fontWeight: FontWeight.bold,
+  fontWeight: FontWeight.w700,
   fontSize: 14,
   fontStyle: FontStyle.normal,
   fontFamily: 'OpenSans',
@@ -34,9 +34,9 @@ const TextStyle kTextFieldHintText = TextStyle(
 
 const TextStyle bottomAppBarTextStyle = TextStyle(
   fontWeight: FontWeight.w600,
-  fontSize: 9,
+  fontSize: 10,
   fontFamily: 'Montserrat',
-  color: Color(0xffA1A4B1),
+  color: Color(0xffFF005E),
 );
 
 const TextStyle homeTitle = TextStyle(
@@ -99,4 +99,25 @@ const TextStyle px12Normalfade = TextStyle(
   color: Color(0xffA1A4B1),
   fontWeight: FontWeight.normal,
   fontSize: 12,
+);
+
+const TextStyle px14SnormalWbold = TextStyle(
+  fontFamily: 'Montserrat',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+);
+const TextStyle faqTitle = TextStyle(
+  fontFamily: 'Montserrat',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.bold,
+  fontSize: 14,
+  height: 1.7,
+);
+
+const TextStyle px9SnormWnormal = TextStyle(
+  fontFamily: 'Montserrat',
+  fontStyle: FontStyle.normal,
+  fontWeight: FontWeight.normal,
+  fontSize: 9,
 );

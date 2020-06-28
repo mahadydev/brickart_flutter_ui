@@ -39,6 +39,7 @@ class _CollectionScreenState extends State<CollectionScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xfff5f5f5),
       appBar: AppBar(
         automaticallyImplyLeading: false,
         centerTitle: true,
@@ -54,49 +55,54 @@ class _CollectionScreenState extends State<CollectionScreen> {
         child: Column(
           children: <Widget>[
             Container(
-              height: 50,
+              height: 48,
               decoration: BoxDecoration(
                 color: Colors.white,
                 boxShadow: [
-                  BoxShadow(color: Colors.grey[400], offset: Offset(2, 1)),
+                  BoxShadow(color: Colors.grey[400], offset: Offset(1, 1)),
                 ],
               ),
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: galleryCategory.length,
-                itemBuilder: (context, index) => Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: GestureDetector(
-                    onTap: () {
-                      setState(() {
-                        selectedCategory = index;
-                      });
-                      _pageController.animateToPage(selectedCategory,
-                          duration: Duration(
-                            microseconds: 300,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: galleryCategory.length,
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () => setState(() {
+                      selectedCategory = index;
+                      _pageController.jumpToPage(selectedCategory);
+                    }),
+                    child: Container(
+                      width: 100,
+                      height: 48,
+                      color: Colors.white,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: <Widget>[
+                          SizedBox(
+                            height: 1,
                           ),
-                          curve: Curves.easeIn);
-                    },
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      children: <Widget>[
-                        Text(
-                          galleryCategory[index],
-                          style: categoryStyle,
-                        ),
-                        Container(
-                          margin: const EdgeInsets.symmetric(vertical: 5),
-                          height: 2,
-                          width: 60,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.all(Radius.circular(20)),
-                            color: index == selectedCategory
-                                ? Theme.of(context).primaryColor
-                                : Colors.transparent,
+                          Text(
+                            galleryCategory[index],
+                            style: categoryStyle,
                           ),
-                        ),
-                      ],
+                          SizedBox(
+                            height: 2,
+                          ),
+                          Container(
+                            height: 2,
+                            width: 60,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(20)),
+                              color: index == selectedCategory
+                                  ? Theme.of(context).primaryColor
+                                  : Colors.transparent,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),

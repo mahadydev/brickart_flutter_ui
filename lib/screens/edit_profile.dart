@@ -72,65 +72,73 @@ class _EditProfileState extends State<EditProfile> {
                           'Full Name',
                           style: kTextFieldLabel,
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                            labelText: "**************",
-                            labelStyle: kTextFieldHintText,
+                        Container(
+                          height: 24,
+                          margin: const EdgeInsets.only(top: 3, bottom: 24),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              labelText: "**************",
+                              labelStyle: kTextFieldHintText,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
                         ),
                         Text(
                           'Email',
                           style: kTextFieldLabel,
                         ),
-                        TextField(
-                          decoration: InputDecoration(
-                            labelText: "aaa@aaa.com.br",
-                            labelStyle: kTextFieldHintText,
+                        Container(
+                          height: 24,
+                          margin: const EdgeInsets.only(top: 3, bottom: 24),
+                          child: TextField(
+                            decoration: InputDecoration(
+                              labelText: "aaa@aaa.com.br",
+                              labelStyle: kTextFieldHintText,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
                         ),
                         Text(
                           'Mobile Phone',
                           style: kTextFieldLabel,
                         ),
-                        TextField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            labelText: "(011)99123-4567",
-                            labelStyle: kTextFieldHintText,
+                        Container(
+                          height: 24,
+                          margin: const EdgeInsets.only(top: 3, bottom: 24),
+                          child: TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              labelText: "(011)99123-4567",
+                              labelStyle: kTextFieldHintText,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
                         ),
                         Text(
                           'Change Password',
                           style: kTextFieldLabel,
                         ),
-                        TextField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            labelText: "***********",
-                            labelStyle: kTextFieldHintText,
+                        Container(
+                          height: 24,
+                          margin: const EdgeInsets.only(top: 3, bottom: 24),
+                          child: TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              labelText: "***********",
+                              labelStyle: kTextFieldHintText,
+                            ),
                           ),
-                        ),
-                        SizedBox(
-                          height: 10,
                         ),
                         Text(
                           'Confirm Password Change',
                           style: kTextFieldLabel,
                         ),
-                        TextField(
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            labelText: "***********",
-                            labelStyle: kTextFieldHintText,
+                        Container(
+                          height: 24,
+                          margin: const EdgeInsets.only(top: 3, bottom: 24),
+                          child: TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                              labelText: "***********",
+                              labelStyle: kTextFieldHintText,
+                            ),
                           ),
                         ),
                         SizedBox(
