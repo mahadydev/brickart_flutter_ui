@@ -42,25 +42,10 @@ class AppbarListTile extends StatelessWidget {
         child: isAR
             ? CircleAvatar(
                 backgroundColor: Theme.of(context).primaryColor,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Container(
-                      height: 20,
-                      width: 20,
-                      child: Image.asset(
-                        'assets/icons/arglass.png',
-                        fit: BoxFit.contain,
-                        color: Colors.white,
-                      ),
-                    ),
-                    Text(
-                      'AR',
-                      style: bottomAppBarTextStyle.copyWith(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
+                child: Image.asset(
+                  'assets/icons/AR-white.png',
+                  height: 40,
+                  width: 40,
                 ),
               )
             : Container(

@@ -39,9 +39,8 @@ class ShoppingCartScreen extends StatelessWidget {
                       children: <Widget>[
                         Image.asset(
                           'assets/icons/gallery.png',
-                          fit: BoxFit.fitWidth,
-                          height: 24,
-                          width: 24,
+                          height: 40,
+                          width: 40,
                         ),
                         SizedBox(
                           width: 10,
@@ -75,10 +74,9 @@ class ShoppingCartScreen extends StatelessWidget {
                     child: Row(
                       children: <Widget>[
                         Image.asset(
-                          'assets/icons/collections.png',
-                          fit: BoxFit.fitWidth,
-                          height: 24,
-                          width: 24,
+                          'assets/icons/paint-brush.png',
+                          height: 40,
+                          width: 40,
                         ),
                         SizedBox(
                           width: 10,
@@ -118,14 +116,13 @@ class ShoppingCartScreen extends StatelessWidget {
                         builder: (context) => ShippingAddress())),
                     child: Container(
                       margin: const EdgeInsets.only(bottom: 5),
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
                       height: 56,
                       color: Colors.white,
                       child: ListTile(
                         leading: Image.asset(
                           'assets/icons/home.png',
-                          height: 20,
-                          width: 20,
+                          height: 40,
+                          width: 40,
                         ),
                         title: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
@@ -156,14 +153,13 @@ class ShoppingCartScreen extends StatelessWidget {
                         builder: (context) => PaymentInformationScreen())),
                     child: Container(
                       margin: const EdgeInsets.only(bottom: 5),
-                      padding: const EdgeInsets.only(left: 15, right: 20),
                       height: 56,
                       color: Colors.white,
                       child: ListTile(
                         leading: Image.asset(
                           'assets/icons/card.png',
-                          height: 30,
-                          width: 30,
+                          height: 40,
+                          width: 40,
                         ),
                         title: Column(
                           mainAxisAlignment: MainAxisAlignment.center,

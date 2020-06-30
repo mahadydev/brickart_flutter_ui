@@ -1,5 +1,4 @@
-import '../util/textstyle_constant.dart';
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 
 import 'button_widget.dart';
 
@@ -16,41 +15,79 @@ class LowResolutionPopup extends StatelessWidget {
         child: Stack(
           children: <Widget>[
             Container(
-              width: MediaQuery.of(context).size.width / 1.2,
-              height: MediaQuery.of(context).size.height / 1.5,
+              width: 252, // MediaQuery.of(context).size.width / 1.2,
+              height: 353, //MediaQuery.of(context).size.height / 1.5,
               color: Colors.white,
               child: Column(
                 children: [
                   Expanded(
-                    child: Padding(
-                      padding: const EdgeInsets.all(20),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: <Widget>[
-                          Icon(
-                            Icons.warning,
-                            color: Colors.red,
-                            size: MediaQuery.of(context).size.width / 3,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: <Widget>[
+                        SizedBox(
+                          height: 42,
+                        ),
+                        Image.asset(
+                          'assets/icons/warning.png',
+                          height: 80,
+                          width: 80,
+                        ),
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Container(
+                          height: 40,
+                          child: Center(
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                  'Warning!',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'Low resolution',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
-                          Column(
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
                             children: <Widget>[
-                              Text('Warning!', style: kTextFieldLabel),
-                              Text('Low resolution', style: kTextFieldLabel),
+                              Text(
+                                'We\'ve detected this image as having low resolution. Thus, printing this picture might make your brick show some bluriness.',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                  fontFamily: 'Montserrat',
+                                  color: Color(0xff4B4B4B),
+                                ),
+                              ),
+                              Text(
+                                '\nDo you want to continue?',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.normal,
+                                  fontFamily: 'Montserrat',
+                                  color: Color(0xff4B4B4B),
+                                ),
+                              ),
                             ],
                           ),
-                          Text(
-                            'We\'ve detected this image as having low resolution. Thus, printing this picture might make your brick show some bluriness. Do you want to continue?',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.normal,
-                              fontFamily: 'Montserrat',
-                              color: Color(0xff4B4B4B),
-                            ),
-                          )
-                        ],
-                      ),
+                        )
+                      ],
                     ),
                   ),
                   ButtonWidget(

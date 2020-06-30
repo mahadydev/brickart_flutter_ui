@@ -48,6 +48,7 @@ class _PageViewBuildState extends State<PageViewBuild> {
     return Scaffold(
       drawer: DrawerMenu(),
       bottomNavigationBar: Container(
+        height: 72,
         child: BottomNavigationBar(
           currentIndex: bottomSelectedIndex,
           backgroundColor: Colors.white,
@@ -72,15 +73,12 @@ class _PageViewBuildState extends State<PageViewBuild> {
     );
   }
 
-  final _bottomNavItems = <BottomNavigationBarItem>[
+  List<BottomNavigationBarItem> _bottomNavItems = <BottomNavigationBarItem>[
     BottomNavigationBarItem(
-      icon: Container(
-        width: 72,
-        child: Image.asset(
-          'assets/icons/home.png',
-          height: 40,
-          width: 40,
-        ),
+      icon: Image.asset(
+        'assets/icons/home.png',
+        height: 40,
+        width: 40,
       ),
       title: Text(
         'Home',
@@ -88,27 +86,21 @@ class _PageViewBuildState extends State<PageViewBuild> {
       ),
     ),
     BottomNavigationBarItem(
-      icon: Container(
-        width: 72,
-        child: Image.asset(
-          'assets/icons/gallery.png',
-          height: 40,
-          width: 40,
-        ),
+      icon: Image.asset(
+        'assets/icons/gallery.png',
+        height: 40,
+        width: 40,
       ),
       title: Text(
-        'My Galary',
+        'My Gallery',
         style: bottomAppBarTextStyle,
       ),
     ),
     BottomNavigationBarItem(
-      icon: Container(
-        width: 72,
-        child: Image.asset(
-          'assets/icons/collections.png',
-          height: 40,
-          width: 40,
-        ),
+      icon: Image.asset(
+        'assets/icons/paint-brush.png',
+        height: 40,
+        width: 40,
       ),
       title: Text(
         'Collections',

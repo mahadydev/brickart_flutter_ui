@@ -142,7 +142,7 @@ class _EditProfileState extends State<EditProfile> {
                           ),
                         ),
                         SizedBox(
-                          height: 20,
+                          height: 66,
                         ),
                       ],
                     ),
@@ -151,10 +151,13 @@ class _EditProfileState extends State<EditProfile> {
               ),
             ),
           ),
-          ButtonWidget(
-              textColor: Colors.white,
-              color: Theme.of(context).primaryColor,
-              text: 'Confirm Changes'.toUpperCase())
+          Padding(
+            padding: const EdgeInsets.only(left: 29, right: 30, bottom: 27),
+            child: ButtonWidget(
+                textColor: Colors.white,
+                color: Theme.of(context).primaryColor,
+                text: 'Confirm Changes'.toUpperCase()),
+          ),
         ],
       ),
     );
